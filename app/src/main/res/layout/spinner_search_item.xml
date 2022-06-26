@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tvTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="viewStart"
+    android:padding="@dimen/_5sdp"
+    android:textColor="@color/txt_color"
+    android:textSize="@dimen/_11sdp"
+    android:text="@string/app_name"
+    android:drawablePadding="@dimen/_10sdp"
+    app:drawableEndCompat="@drawable/ic_search_arrow"
+    app:drawableStartCompat="@drawable/ic_search_list" />

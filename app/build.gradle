@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "wrteam.ecart.shop"
+        minSdkVersion 27
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.0"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        proguardFiles
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-new.pro'
+            crunchPngs true
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleDependency
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    //noinspection GradleDependency
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+    implementation "com.google.android.gms:play-services-gcm:17.0.0"
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'com.google.android.libraries.places:places:2.6.0'
+
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+
+    // Declare the dependencies for the Firebase Cloud Messaging and Analytics libraries
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-core'
+
+    // paytm dependency
+    implementation('com.paytm:pgplussdk:1.4.4') {
+        transitive = true
+    }
+
+    //Payumoney
+    implementation 'com.payumoney.sdkui:plug-n-play:1.6.1'
+
+    //Razorpay
+    implementation 'com.razorpay:checkout:1.6.18'
+
+    //PayStack
+    implementation 'co.paystack.android:paystack:3.1.3'
+
+    //FlutterWave
+    implementation 'com.github.Flutterwave:rave-android:1.0.49.1'
+
+    //Stripe
+    //noinspection GradleDependency
+    implementation 'com.stripe:stripe-android:17.1.2'
+
+    // Declare the dependency for the JWT KEY
+    implementation('io.jsonwebtoken:jjwt:0.9.1')
+
+    // Declare the dependency for the country code picker
+    implementation 'com.hbb20:ccp:2.6.0'
+
+    // Declare the dependency for the image loader
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Dimension library for every device UI Balance
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //Lottie animation
+    implementation 'com.airbnb.android:lottie:5.0.3'
+
+    implementation 'com.github.bumptech.glide:glide:4.13.1'
+
+    //sslcommerz-sdk
+    implementation(name: 'sslmodule', ext: 'aar')
+}

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    shimmer:ignore="Overdraw">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lytMessage"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="@dimen/_5sdp" />
+
+
+    <LinearLayout
+        android:id="@+id/lytMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:padding="@dimen/_1sdp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_shadow"
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="30">
+
+            <LinearLayout
+                android:id="@+id/lytSendMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="30">
+
+                <EditText
+                    android:id="@+id/edtMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/card_shadow"
+                    android:gravity="top|start"
+                    android:hint="@string/message_"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:minLines="1"
+                    android:padding="@dimen/_9sdp"
+                    android:scrollbars="vertical"
+                    shimmer:ignore="NestedWeights" />
+
+                <ImageView
+                    android:id="@+id/imgSelectImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="@drawable/text_view_ripple"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/ic_attach_image_" />
+
+                <ImageView
+                    android:id="@+id/imgSendMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="@drawable/text_view_ripple"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/ic_send_message_" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:fontFamily="@font/open_sans"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/mShimmerViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        shimmer:shimmer_duration="1200">
+
+        <!-- Adding rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+            <View
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start"
+                android:background="@drawable/card_shadow"
+                android:backgroundTint="@color/background" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

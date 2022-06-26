@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/toolbar_search"
+        android:icon="@drawable/ic_search_"
+        android:title="@string/search"
+        android:visible="false"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/toolbar_sort"
+        android:icon="@drawable/ic_sort_"
+        android:title="@string/filter_by"
+        android:visible="false"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/toolbar_layout"
+        android:icon="@drawable/ic_grid_"
+        android:title="@string/change_layout"
+        android:visible="false"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/toolbar_cart"
+        android:icon="@drawable/ic_cart_"
+        android:title="@string/title_cart"
+        android:visible="false"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/toolbar_logout"
+        android:icon="@drawable/ic_logout_"
+        android:title="@string/logout"
+        android:visible="false"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/menu_item_add_image"
+        android:icon="@drawable/ic_done_"
+        android:orderInCategory="100"
+        android:title="@string/add"
+        android:visible="false"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingTop="@dimen/dimen_2dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="@dimen/dimen_2dp">
+
+    <TextView
+        android:textAlignment="viewStart"
+        android:id="@+id/tvMeasurement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
